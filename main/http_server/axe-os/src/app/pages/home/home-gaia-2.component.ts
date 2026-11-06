@@ -10,6 +10,7 @@ import { HomeGaiaComponent } from './home-gaia.component';
 })
 export class HomeGaia2Component extends HomeGaiaComponent {
   protected override get asicTemperatureColor(): string { return '#39C5CF'; }
+  protected override get vrTemperatureColor(): string { return '#A78BFA'; }
 
   protected override get hashrateColor(): string {
     return '#398BD0';
