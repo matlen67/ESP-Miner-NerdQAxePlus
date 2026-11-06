@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { value: 'default',   name: 'Light' },
     { value: 'dark',      name: 'Dark' },
     { value: 'gaia', name: 'Gaia' },
-    { value: 'gaia-blue', name: 'Gaia-2' },
+    { value: 'gaia-2', name: 'Gaia-2' },
   ];
 
   currentTheme = 'cosmic';  // Default theme if none is found in localStorage
@@ -85,7 +85,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
       });
 
     // 1) If available, use saved theme
-    const savedTheme = localStorage.getItem('selectedTheme');
+    const storedTheme = localStorage.getItem('selectedTheme');
+    // Migrate the former Gaia-Blue theme key without losing the user's selection.
+    const savedTheme = storedTheme === 'gaia-blue' ? 'gaia-2' : storedTheme;
+    if (storedTheme === 'gaia-blue') localStorage.setItem('selectedTheme', 'gaia-2');
     if (savedTheme && this.isThemeValid(savedTheme)) {
       this.applyTheme(savedTheme); // no saving here
     }
