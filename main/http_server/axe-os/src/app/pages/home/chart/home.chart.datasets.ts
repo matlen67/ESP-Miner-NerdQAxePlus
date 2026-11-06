@@ -13,10 +13,11 @@ export interface HomeChartSeriesRefs {
   asicTemp: number[];
 }
 
-export function createHomeDatasets(opts: { t: (key: string) => string; series: HomeChartSeriesRefs; hashrateColor?: string; asicTempColor?: string }): any[] {
+export function createHomeDatasets(opts: { t: (key: string) => string; series: HomeChartSeriesRefs; hashrateColor?: string; asicTempColor?: string; vrTempColor?: string }): any[] {
   const { t, series } = opts;
   const HR_BASE_COLOR = opts.hashrateColor ?? HOME_CFG.colors.hashrateBase;
   const ASIC_TEMP_COLOR = opts.asicTempColor ?? HOME_CFG.colors.asicTemp;
+  const VR_TEMP_COLOR = opts.vrTempColor ?? HOME_CFG.colors.vregTemp;
 
   function hrColor(alpha: number = 1): string {
     if (alpha >= 1) return HR_BASE_COLOR;
@@ -43,7 +44,7 @@ export function createHomeDatasets(opts: { t: (key: string) => string; series: H
     const ctx = chart?.ctx;
     const chartArea = chart?.chartArea;
 
-    const baseHex = HOME_CFG.colors.vregTemp;
+    const baseHex = VR_TEMP_COLOR;
     const topAlpha = 0.01;
     const bottomAlpha = 0.12;
 
@@ -156,7 +157,7 @@ export function createHomeDatasets(opts: { t: (key: string) => string; series: H
     data: series.vregTemp,
     yAxisID: 'y_temp',
     fill: true,
-    borderColor: HOME_CFG.colors.vregTemp,
+    borderColor: VR_TEMP_COLOR,
     backgroundColor: (context: any) => vrTempAreaGradient(context),
     tension: .4,
     cubicInterpolationMode: 'monotone',
