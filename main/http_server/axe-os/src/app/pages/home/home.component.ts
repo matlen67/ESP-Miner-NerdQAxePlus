@@ -124,7 +124,8 @@ export class HomeComponent implements AfterViewChecked, OnInit, OnDestroy {
   // CSS vars for meter bars (kept in sync with HOME_CFG)
   @HostBinding('style.--bar-fill') barFill: string = this.hashrateColor;
   @HostBinding('style.--bar-track') barTrack: string = HOME_CFG.colors.chartGridColor;
-  @HostBinding('style.--asic-temp-pill') asicTempPill: string = HOME_CFG.colors.asicTemp;
+  protected get asicTemperatureColor(): string { return HOME_CFG.colors.asicTemp; }
+  @HostBinding('style.--asic-temp-pill') get asicTempPill(): string { return this.asicTemperatureColor; }
 
   // DOM hook: special-case bar fills without complicating templates
   private currentInputBarMaxWanted: boolean = false;
@@ -728,6 +729,7 @@ export class HomeComponent implements AfterViewChecked, OnInit, OnDestroy {
 
     const cfg = createHomeChartConfig({
       hashrateColor: this.hashrateColor,
+      asicTempColor: this.asicTemperatureColor,
       series: {
         labels: this.dataLabel,
         hr1m: this.dataData1m,
