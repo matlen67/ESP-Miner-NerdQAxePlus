@@ -290,8 +290,8 @@
         <!-- Heat -->
         <div class="nerd-panel">
           <div class="nerd-panel__title">Heat</div>
-          <!-- ASIC temperature: cyan below 50 °C, red from 50 °C. -->
-          <ng-container *ngTemplateOutlet="metricRow; context: { icon: 'thermometer-outline', cls: maxAsicTemp(info) >= 50 ? 'm-red' : 'm-cyan', label: ('PERFORMANCE.ASIC_TEMP' | translate), value: (maxAsicTemp(info) | number:'1.1-1'), unit: '°C', raw: maxAsicTemp(info), min: 0, max: shutdownTempC(info), dfmt: '1.0-0' }"></ng-container>
+          <!-- ASIC temperature: Gaia-2 turquoise below 50 °C, warning red from 50 °C. -->
+          <ng-container *ngTemplateOutlet="metricRow; context: { icon: 'thermometer-outline', cls: maxAsicTemp(info) >= 50 ? 'm-red' : 'm-asic', label: ('PERFORMANCE.ASIC_TEMP' | translate), value: (maxAsicTemp(info) | number:'1.1-1'), unit: '°C', raw: maxAsicTemp(info), min: 0, max: shutdownTempC(info), dfmt: '1.0-0' }"></ng-container>
           <ng-container *ngIf="info.thermal.vrTemp > 0" [ngTemplateOutlet]="metricRow" [ngTemplateOutletContext]="{ icon: 'thermometer-outline', cls: 'm-cyan', label: ('PERFORMANCE.VR_TEMP' | translate), value: (info.thermal.vrTemp | number:'1.1-1'), unit: '°C', raw: info.thermal.vrTemp, min: 0, max: 100, dfmt: '1.0-0' }"></ng-container>
           <!-- Fan channel 1: ASIC fan, RPM with percentage in parentheses. -->
           <ng-container *ngTemplateOutlet="metricRow; context: { fan: true, cls: 'm-blue', label: ('HOME.FAN_ASICS_LABEL' | translate), value: ((info.thermal.fans?.[0]?.rpm ?? 0) > 0 ? ((info.thermal.fans?.[0]?.rpm ?? 0) | number:'1.0-0') : '—'), unit: ' RPM (' + ((info.thermal.fans?.[0]?.speed ?? 0) | number:'1.0-0') + '%)', raw: (info.thermal.fans?.[0]?.speed ?? 0), min: 0, max: 100, dfmt: '1.0-0' }"></ng-container>
