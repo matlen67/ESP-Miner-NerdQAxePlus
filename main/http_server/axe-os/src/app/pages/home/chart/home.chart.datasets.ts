@@ -13,9 +13,10 @@ export interface HomeChartSeriesRefs {
   asicTemp: number[];
 }
 
-export function createHomeDatasets(opts: { t: (key: string) => string; series: HomeChartSeriesRefs; hashrateColor?: string }): any[] {
+export function createHomeDatasets(opts: { t: (key: string) => string; series: HomeChartSeriesRefs; hashrateColor?: string; asicTempColor?: string }): any[] {
   const { t, series } = opts;
   const HR_BASE_COLOR = opts.hashrateColor ?? HOME_CFG.colors.hashrateBase;
+  const ASIC_TEMP_COLOR = opts.asicTempColor ?? HOME_CFG.colors.asicTemp;
 
   function hrColor(alpha: number = 1): string {
     if (alpha >= 1) return HR_BASE_COLOR;
@@ -65,7 +66,7 @@ export function createHomeDatasets(opts: { t: (key: string) => string; series: H
     const ctx = chart?.ctx;
     const chartArea = chart?.chartArea;
 
-    const baseHex = HOME_CFG.colors.asicTemp;
+    const baseHex = ASIC_TEMP_COLOR;
     const topAlpha = 0.01;
     const bottomAlpha = 0.21;
 
@@ -169,7 +170,7 @@ export function createHomeDatasets(opts: { t: (key: string) => string; series: H
     data: series.asicTemp,
     yAxisID: 'y_temp',
     fill: true,
-    borderColor: HOME_CFG.colors.asicTemp,
+    borderColor: ASIC_TEMP_COLOR,
     backgroundColor: (context: any) => asicTempAreaGradient(context),
     tension: .4,
     cubicInterpolationMode: 'monotone',
