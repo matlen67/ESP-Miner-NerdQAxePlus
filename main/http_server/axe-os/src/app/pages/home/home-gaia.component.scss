@@ -23,10 +23,10 @@
   min-height: 4.25rem;
   padding: 0.7rem 1.1rem;
   border-radius: var(--card-border-radius, 0.85rem);
-  background: var(--card-background-color, #17171b);
+  background: var(--card-background-color, #192432);
   background:
     radial-gradient(130% 120% at 0% 0%, color-mix(in srgb, var(--accent) 10%, transparent) 0%, transparent 55%),
-    var(--card-background-color, #17171b);
+    var(--card-background-color, #192432);
   border: 1px solid var(--border-basic-color-3, rgba(255, 255, 255, 0.07));
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
   overflow: hidden;
@@ -119,10 +119,10 @@
 .nerd-stat__foot--right { margin-top: auto; text-align: right; }
 
 /* per-card accent colors (match the mockup) */
-.nerd-stat--hash   { --accent: #e8a23c; }
+.nerd-stat--hash   { --accent: #398bd0; }
 .nerd-stat--shares { --accent: #21c7c7; }
 .nerd-stat--eff    { --accent: #34d399; }
-.nerd-stat--best   { --accent: #e8a23c; }
+.nerd-stat--best   { --accent: #398bd0; }
 
 /* ── NEROQ+ bottom dashboard row (gaia) ─────────────────────────────────── */
 .nerd-dash-grid {
@@ -150,7 +150,7 @@
   min-width: 0;
   padding: 1.05rem 1.2rem;
   border-radius: var(--card-border-radius, 0.85rem);
-  background: var(--card-background-color, #17171b);
+  background: var(--card-background-color, #192432);
   border: 1px solid var(--border-basic-color-3, rgba(255, 255, 255, 0.07));
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
 }
@@ -181,7 +181,7 @@
 }
 .nerd-panel__edit:hover {
   opacity: 1;
-  color: #f0b352;
+  color: #64a9e0;
   background: rgba(232, 162, 60, 0.12);
 }
 
@@ -283,8 +283,8 @@
 
 /* per-metric accent colors */
 .metric-row.m-purple { --m: #7b6ef6; }
-.metric-row.m-blue   { --m: #e8a23c; }
-.metric-row.m-amber  { --m: #e8a23c; }
+.metric-row.m-blue   { --m: #398bd0; }
+.metric-row.m-amber  { --m: #398bd0; }
 .metric-row.m-red    { --m: #f0584b; }
 .metric-row.m-cyan   { --m: #21c7c7; }
 .metric-row.m-green  { --m: #34d399; }
@@ -490,7 +490,7 @@
 .nerd-chart-range:hover { color: var(--text-basic-color); }
 .nerd-chart-range.is-active {
   background: rgba(232, 162, 60, 0.18);
-  color: #f0b352;
+  color: #64a9e0;
 }
 .nerd-chart-header2__right {
   margin-left: auto;
@@ -557,7 +557,7 @@
   padding: 0 0.5rem 0.45rem;
   pointer-events: none;
 }
-.nerd-chart-axis__left  { font-size: 0.72rem; font-weight: 600; color: #f0b352; }
+.nerd-chart-axis__left  { font-size: 0.72rem; font-weight: 600; color: #64a9e0; }
 .nerd-chart-axis__right { font-size: 0.72rem; font-weight: 600; color: #41c9d6; }
 /* controls at the bottom, well distributed */
 :host-context(.nb-theme-gaia) .nerd-chart-footer {
