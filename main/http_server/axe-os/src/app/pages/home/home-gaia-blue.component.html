@@ -297,7 +297,7 @@
           <ng-container *ngTemplateOutlet="metricRow; context: { fan: true, cls: 'm-blue', label: ('HOME.FAN_ASICS_LABEL' | translate), value: ((info.thermal.fans?.[0]?.rpm ?? 0) > 0 ? ((info.thermal.fans?.[0]?.rpm ?? 0) | number:'1.0-0') : '—'), unit: ' RPM (' + ((info.thermal.fans?.[0]?.speed ?? 0) | number:'1.0-0') + '%)', raw: (info.thermal.fans?.[0]?.speed ?? 0), min: 0, max: 100, dfmt: '1.0-0' }"></ng-container>
           <!-- Fan channel 2: VR fan, shown only when firmware reports a second fan. -->
           <ng-container *ngIf="(info.thermal.fans?.length ?? 0) > 1">
-            <ng-container *ngTemplateOutlet="metricRow; context: { fan: true, cls: 'm-cyan', label: ('HOME.FAN_VR_LABEL' | translate), value: ((info.thermal.fans?.[1]?.rpm ?? 0) > 0 ? ((info.thermal.fans?.[1]?.rpm ?? 0) | number:'1.0-0') : '—'), unit: ' RPM (' + ((info.thermal.fans?.[1]?.speed ?? 0) | number:'1.0-0') + '%)', raw: (info.thermal.fans?.[1]?.speed ?? 0), min: 0, max: 100, dfmt: '1.0-0' }"></ng-container>
+            <ng-container *ngTemplateOutlet="metricRow; context: { fan: true, cls: 'm-blue', label: ('HOME.FAN_VR_LABEL' | translate), value: ((info.thermal.fans?.[1]?.rpm ?? 0) > 0 ? ((info.thermal.fans?.[1]?.rpm ?? 0) | number:'1.0-0') : '—'), unit: ' RPM (' + ((info.thermal.fans?.[1]?.speed ?? 0) | number:'1.0-0') + '%)', raw: (info.thermal.fans?.[1]?.speed ?? 0), min: 0, max: 100, dfmt: '1.0-0' }"></ng-container>
           </ng-container>
         </div>
 
