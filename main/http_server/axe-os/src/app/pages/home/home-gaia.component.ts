@@ -22,9 +22,9 @@ import { toPct } from './tiles/utils';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeGaiaComponent extends HomeComponent {
-  // Gaia blue instead of the default purple for the hashrate chart and bars
+  // Gaia gold instead of the default purple for the hashrate chart and bars
   protected override get hashrateColor(): string {
-    return '#398BD0';
+    return '#E8B23C';
   }
 
   private readonly sysService = inject(SystemService);
