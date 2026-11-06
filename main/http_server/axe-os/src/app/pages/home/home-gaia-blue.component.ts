@@ -4,7 +4,7 @@ import { HomeGaiaComponent } from './home-gaia.component';
 /** Gaia dashboard with the blue BCH Solo Pool palette. */
 @Component({
   selector: 'app-home-gaia-blue',
-  templateUrl: './home-gaia.component.html',
+  templateUrl: './home-gaia-blue.component.html',
   styleUrls: ['./home.component.scss', './home-gaia-blue.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
