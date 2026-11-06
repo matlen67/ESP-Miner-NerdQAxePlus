@@ -249,11 +249,11 @@ $nb-themes: nb-register-theme((
   card-header-with-select-padding-top: 0.5rem,
   card-header-with-select-padding-bottom: 0.5rem,
   select-min-width: 6rem,
-  slide-out-background: #10151d,
+  slide-out-background: #010409,
   slide-out-shadow-color: 2px 0 10px rgba(0, 0, 0, 0.6),
   slide-out-shadow-color-rtl: -2px 0 10px rgba(0, 0, 0, 0.6),
-  gauge-bg: #23384d,
-  gauge-value-color: #398bd0,
+  gauge-bg: #21262d,
+  gauge-value-color: #2f81f7,
 
   // ───── 1) TIPOGRAFÍA ─────────────────────────────────────────────────────
   //  Descomenta para cambiar la fuente (la UI usa Inter; los números, JetBrains
@@ -263,7 +263,7 @@ $nb-themes: nb-register-theme((
   // ───── 2) PALETA: NEGROS NEUTROS ELEGANTES (mata el azul/morado cosmic) ────
   //  Ramp de grises neutro (claro → oscuro): quita cualquier tinte de color.
   color-basic-100: #ffffff,
-  color-basic-200: #e6edf5,
+  color-basic-200: #e6edf3,
   color-basic-300: #cfcfd5,
   color-basic-400: #a0a0a8,
   color-basic-500: #7c7c84,
@@ -272,33 +272,33 @@ $nb-themes: nb-register-theme((
   color-basic-800: #2a2a2f,
   color-basic-900: #1d1d21,
   color-basic-1000: #151518,
-  color-basic-1100: #10151d,
+  color-basic-1100: #010409,
 
   //  Superficies, bordes y texto — neutros, con profundidad por capas
-  background-basic-color-1: #192432,
-  background-basic-color-2: #203044,
-  background-basic-color-3: #25364a,
-  background-basic-color-4: #2a3b4d,
+  background-basic-color-1: #0d1117,
+  background-basic-color-2: #161b22,
+  background-basic-color-3: #21262d,
+  background-basic-color-4: #30363d,
 
-  border-basic-color-1: #203044,
-  border-basic-color-2: #25364a,
-  border-basic-color-3: #2a3b4d,
+  border-basic-color-1: #161b22,
+  border-basic-color-2: #21262d,
+  border-basic-color-3: #30363d,
   border-basic-color-4: #3d3d45,
   border-basic-color-5: #4b4b54,
 
-  text-basic-color: #e6edf5,
+  text-basic-color: #e6edf3,
   text-alternate-color: #ffffff,
-  text-hint-color: #7e7e87,
+  text-hint-color: #8b949e,
   text-disabled-color: #55555c,
 
-  layout-background-color: #10151d,
-  card-background-color: #192432,
-  card-border-color: #2a3b4d,
-  card-text-color: #e6edf5,
-  header-background-color: #131d29,
-  header-text-color: #e6edf5,
-  sidebar-background-color: #0e1722,
-  select-background-color: #203044,
+  layout-background-color: #010409,
+  card-background-color: #0d1117,
+  card-border-color: #30363d,
+  card-text-color: #e6edf3,
+  header-background-color: #0d1117,
+  header-text-color: #e6edf3,
+  sidebar-background-color: #010409,
+  select-background-color: #161b22,
   shadow: 0 2px 12px rgba(0, 0, 0, 0.45),
 
   // ───── 3) ACENTO (primary) — ámbar/oro cálido, elegante sobre negro ───────
@@ -306,12 +306,12 @@ $nb-themes: nb-register-theme((
   color-primary-100: #eaf5ff,
   color-primary-200: #cde7fa,
   color-primary-300: #9dcdf0,
-  color-primary-400: #64a9e0,
-  color-primary-500: #398bd0,   // ← base (ámbar/oro)
-  color-primary-600: #2c75b4,   // ← focus
-  color-primary-700: #225b8d,
-  color-primary-800: #194366,
-  color-primary-900: #102c45,
+  color-primary-400: #58a6ff,
+  color-primary-500: #2f81f7,   // ← base (ámbar/oro)
+  color-primary-600: #1f6feb,   // ← focus
+  color-primary-700: #1158c7,
+  color-primary-800: #0d419d,
+  color-primary-900: #0a3069,
 
   // ───── 3) ESTILO DE CONTROLES ─────────────────────────────────────────────
   //  Redondez global de botones, inputs, selects y tarjetas. Prueba 0 / 0.25rem
@@ -322,21 +322,21 @@ $nb-themes: nb-register-theme((
   //  Sin líneas separadoras, botones redondeados tipo "pill", hover suave y
   //  resaltado ámbar del item activo. (Variables nativas de Nebular -> se
   //  compilan ya con el scope .nb-theme-gaia, sin pelear especificidad.)
-  menu-text-color: #b6b6bf,
+  menu-text-color: #b1bac4,
   menu-text-font-weight: 500,
-  menu-item-icon-color: #82828c,
+  menu-item-icon-color: #8b949e,
   menu-item-padding: 0.72rem 1rem,
   menu-item-border-radius: 0.7rem,
   menu-item-divider-width: 0,
   menu-item-divider-style: none,
   menu-item-divider-color: transparent,
-  menu-item-hover-background-color: rgba(57, 139, 208, 0.10),
+  menu-item-hover-background-color: rgba(47, 129, 247, 0.10),
   menu-item-hover-text-color: #ffffff,
   menu-item-icon-hover-color: #ffffff,
-  menu-item-active-background-color: rgba(57, 139, 208, 0.16),
-  menu-item-active-text-color: #64a9e0,
-  menu-item-icon-active-color: #398bd0,
+  menu-item-active-background-color: rgba(47, 129, 247, 0.16),
+  menu-item-active-text-color: #58a6ff,
+  menu-item-icon-active-color: #2f81f7,
   // indicador del item activo cuando el menú está compactado (Nebular lo pinta
   // con el primary por defecto -> ámbar; lo forzamos a azul para que combine)
-  sidebar-menu-item-highlight-color: #398bd0,
+  sidebar-menu-item-highlight-color: #2f81f7,
 ), gaia-blue, cosmic);
