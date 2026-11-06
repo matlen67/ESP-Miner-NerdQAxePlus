@@ -117,7 +117,7 @@
    Logo un 20% más pequeño (40px -> 32px). Solo se aplica con el tema Gaia.
    ──────────────────────────────────────────────────────────────────────────── */
 :host-context(.nb-theme-gaia),
-:host-context(.nb-theme-gaia-blue) {
+:host-context(.nb-theme-gaia-2) {
   /* Fill the header and vertically centre EVERYTHING (logo, hamburger and the
      right-side controls) on the header's real centre line. Without this the host
      only grows to the tallest control (the select), leaving the logo aligned to
@@ -236,8 +236,8 @@
 }
 
 
-/* Blue accents for Gaia-Blue, while original Gaia stays gold. */
-:host-context(.nb-theme-gaia-blue) {
+/* Blue accents for Gaia-2, while original Gaia stays gold. */
+:host-context(.nb-theme-gaia-2) {
   .header-series__line { background: linear-gradient(90deg, #398bd0 0%, #64a9e0 100%); }
   .header-series__brand .header-series__os { color: #398bd0; }
   .header-container:first-child .sidebar-toggle .gaia-burger { color: #64a9e0; background: rgba(57, 139, 208, 0.12); }
