@@ -1,12 +1,20 @@
 name: Build and Release ESP32 Firmware
 
 on:
-  workflow_dispatch:  # Manual trigger only
+  # Build firmware automatically when a GitHub Release is published.
+  release:
+    types: [published]
+  # Keep manual builds and the optional diagnostic build available.
+  workflow_dispatch:
     inputs:
       enable_coredump:
         description: 'Diagnostic build: panic core dump capture + download endpoint. Only published to pre-releases (fails for a stable release); otherwise artifacts only. The dump can leak WiFi/pool credentials to anyone on the LAN unless OTP is enabled on the device.'
         type: boolean
         default: false
+
+# Required for attaching the built binaries to the published release.
+permissions:
+  contents: write
 
 jobs:
   ca-bundle-test:
