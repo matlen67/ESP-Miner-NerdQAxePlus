@@ -126,6 +126,7 @@ export class HomeComponent implements AfterViewChecked, OnInit, OnDestroy {
   @HostBinding('style.--bar-track') barTrack: string = HOME_CFG.colors.chartGridColor;
   protected get asicTemperatureColor(): string { return HOME_CFG.colors.asicTemp; }
   protected get vrTemperatureColor(): string { return HOME_CFG.colors.vregTemp; }
+  protected get fillTemperatureChartAreas(): boolean { return true; }
   @HostBinding('style.--asic-temp-pill') get asicTempPill(): string { return this.asicTemperatureColor; }
 
   // DOM hook: special-case bar fills without complicating templates
@@ -732,6 +733,7 @@ export class HomeComponent implements AfterViewChecked, OnInit, OnDestroy {
       hashrateColor: this.hashrateColor,
       asicTempColor: this.asicTemperatureColor,
       vrTempColor: this.vrTemperatureColor,
+      fillTemperatureAreas: this.fillTemperatureChartAreas,
       series: {
         labels: this.dataLabel,
         hr1m: this.dataData1m,
